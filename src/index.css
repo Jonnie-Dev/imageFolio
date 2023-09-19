@@ -7,3 +7,7 @@ body {
   background: #404040;
   color: #fff;
 }
+
+*:focus-visible {
+  outline: 0;
+}
