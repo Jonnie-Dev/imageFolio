@@ -3,8 +3,7 @@ import Login from "./Components/Login";
 
 function App() {
   return (
-    <section>
-      <div>Hello</div>
+    <section className="">
       <Login />
     </section>
   );
