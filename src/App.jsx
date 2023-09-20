@@ -11,6 +11,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [images, setImages] = useState(imageData);
+  const [searchVal, setSearchVal] = useState("");
 
   return (
     <main className="lg:mx-16 md:mx-8 md:my-8 mx-4 my-4  ">
@@ -19,13 +20,21 @@ function App() {
           path="/"
           element={
             <>
-              <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+              <Nav
+                isLoggedIn={isLoggedIn}
+                setIsLoggedIn={setIsLoggedIn}
+                images={images}
+                setImages={setImages}
+                searchVal={searchVal}
+                setSearchVal={setSearchVal}
+              />
               <>
                 <DndProvider backend={HTML5Backend}>
                   <Gallery
                     images={images}
                     isLoggedIn={isLoggedIn}
                     setImages={setImages}
+                    searchVal={searchVal}
                   />
                 </DndProvider>
               </>

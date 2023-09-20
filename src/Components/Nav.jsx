@@ -1,15 +1,34 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SearchNormal1 } from "iconsax-react";
 import { auth } from "../../firebase"; // Import your Firebase configuration
+import imageData from "../assets/data";
 
-export default function Nav({ isLoggedIn, setIsLoggedIn }) {
-  const [searchVal, setSearchVal] = useState("");
-
-  const handleSearch = (e) => {
+export default function Nav({
+  isLoggedIn,
+  setIsLoggedIn,
+  setImages,
+  searchVal,
+  setSearchVal,
+}) {
+  const handleSearchInput = (e) => {
     setSearchVal(e.target.value);
   };
+
+  useEffect(() => {
+    function handleFilter(el) {
+      if (searchVal == "") {
+        setImages(imageData);
+      } else {
+        let filteredImages = [...imageData].filter((item) =>
+          item.tags.join("").includes(el)
+        );
+        setImages(filteredImages);
+      }
+    }
+    handleFilter(searchVal);
+  }, [searchVal, setImages]);
 
   const handleLogout = async () => {
     try {
@@ -29,7 +48,7 @@ export default function Nav({ isLoggedIn, setIsLoggedIn }) {
         >
           <input
             className=" bg-transparent w-full pr-4"
-            onChange={handleSearch}
+            onChange={handleSearchInput}
             placeholder="Search your favorite photos..."
             value={searchVal}
           />

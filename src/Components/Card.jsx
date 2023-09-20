@@ -60,7 +60,7 @@ const Card = ({ url, tags, alt, index, id, moveImage }) => {
     <div
       ref={ref}
       style={{ opacity }}
-      className=" rounded-2xl relative md:cursor-pointer  shadow-md overflow-hidden hover:[&>img]:scale-110 h-[350px] flex justify-center items-center"
+      className=" bg-slate-300 rounded-2xl relative md:cursor-pointer  shadow-md overflow-hidden hover:[&>img]:scale-110 h-[350px] flex justify-center items-center"
     >
       <img
         className="object-cover h-full w-full transition-all"
@@ -69,7 +69,7 @@ const Card = ({ url, tags, alt, index, id, moveImage }) => {
       />
       <div className=" absolute bottom-0 left-0 flex gap-2 flex-wrap px-2 py-2">
         {tags[0] &&
-          tags.map((el) => (
+          tags.slice(0, 6).map((el) => (
             <p
               className="bg-opacity-60 backdrop-blur-md px-2 py-1 rounded-md text-xs font-medium text-grey-700 bg-slate-700 "
               key={el}

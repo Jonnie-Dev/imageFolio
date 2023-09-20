@@ -2,7 +2,7 @@
 import { useCallback, Children } from "react";
 import Card from "./Card";
 
-const Gallery = ({ images, setImages, isLoggedIn }) => {
+const Gallery = ({ images, setImages, isLoggedIn, searchVal }) => {
   const moveImage = useCallback(
     (dragIndex, hoverIndex) => {
       setImages((prevCards) => {
@@ -15,6 +15,14 @@ const Gallery = ({ images, setImages, isLoggedIn }) => {
     },
     [setImages]
   );
+
+  if (images.length == 0) {
+    return (
+      <p className="text-2xl text-center mt-16">
+        No images found for <q>{searchVal}</q>
+      </p>
+    );
+  }
 
   return (
     <>
