@@ -11,3 +11,17 @@ body {
 *:focus-visible {
   outline: 0;
 }
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 4rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .custom-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 2rem;
+  }
+}
