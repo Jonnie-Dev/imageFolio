@@ -70,7 +70,7 @@ To run the project, ensure you have the following requirements met:
 
 - Node.js installed
 - NPM or Yarn package manager
-- Authentication backend (Firebase) for user login
+- Authentication backend (Firebase) setup
 
 ## Tech Stack
 
