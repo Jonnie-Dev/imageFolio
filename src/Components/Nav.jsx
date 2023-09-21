@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { SearchNormal1 } from "iconsax-react";
 import { auth } from "../../firebase"; // Import your Firebase configuration
 import imageData from "../assets/data";
+// import logo from "../assets/imageFolio.svg";
 
 export default function Nav({
   isLoggedIn,
@@ -42,6 +43,7 @@ export default function Nav({
   return (
     <nav className="flex flex-wrap justify-between items-center gap-2 mb-12">
       <h1 className="text-2xl">ImageFolio</h1>
+
       <div className="flex md:w-[75%] w-full justify-between items-center gap-4 ">
         <div
           className={`px-4 py-2 md:px-8 md:py-4 rounded-2xl flex justify-between item-center bg-[#787878] w-[75%]`}
