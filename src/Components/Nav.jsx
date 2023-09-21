@@ -23,7 +23,7 @@ export default function Nav({
         setImages(imageData);
       } else {
         let filteredImages = [...imageData].filter((item) =>
-          item.tags.join("").includes(el)
+          item.tags.join("").includes(el.toLowerCase())
         );
         setImages(filteredImages);
       }
