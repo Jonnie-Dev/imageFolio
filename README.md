@@ -1,4 +1,3 @@
-
 # ImageFolio
 
 ImageFolio is a user-friendly and elegant image gallery application that allows you to effortlessly organize and showcase with your favorite images. 
@@ -9,7 +8,7 @@ ImageFolio provides a seamless and intuitive experience for image enthusiasts of
 - [Getting Started](#getting-started)
 - [Requirements](#requirements)
 - [Technologies Used](#tech-stack)
-- [Screenshots](#screenshots)
+- [Screenshot](#screenshot)
 
 ## Features
 
@@ -64,6 +63,7 @@ To get started with this project locally, follow these steps:
     npm run dev
 
 - Open your web browser and access the application at ```http://localhost:5173```
+  
 ## Requirements
 
 To run the project, ensure you have the following requirements met:
@@ -81,7 +81,7 @@ To run the project, ensure you have the following requirements met:
 **Auth**: Firebase
 
 
-## Screenshots
+## Screenshot
+![imageFolio-mobile](https://github.com/Jonnie-Dev/imageFolio/assets/73708569/839682bd-a40a-4808-9d6a-4be1253a9bcd)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
